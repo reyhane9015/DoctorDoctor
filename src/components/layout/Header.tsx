@@ -47,8 +47,12 @@ const Header: React.FC = () => {
         </div>
 
         <div className="flex gap-4">
-           <ButtonPrimary label={"ورود کاربران"} onClick={() => console.log("bbb")}/>
-           <ButtonSecondery label={"ورود پزشکان"} onClick={() => console.log("hhh")}/>
+          <Link href="/loginUsers">
+            <ButtonPrimary label={"ورود کاربران"} onClick={() => console.log("bbb")}/>
+          </Link>
+          <Link href="/loginDoctors">
+            <ButtonSecondery label={"ورود پزشکان"} onClick={() => console.log("hhh")}/>
+          </Link>
         </div>
       </div>
    </header>
