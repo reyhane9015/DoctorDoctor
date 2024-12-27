@@ -2,28 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+  html {
+    font-family: "Farsi";
+  }
+    @font-face {
+      font-family: Farsi;
+      font-style: normal;
+      font-weight: bold;
+      src: url("../../public/fonts/iranyekanwebboldfanum.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: Farsi;
+      font-style: normal;
+      font-weight: 100;
+      src: url("../../public/fonts/iranyekanwebthinfanum.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: Farsi;
+      font-style: normal;
+      font-weight: 300;
+      src: url("../../public/fonts/iranyekanweblightfanum.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: Farsi;
+      font-style: normal;
+      font-weight: normal;
+      src: url("../../public/fonts/iranyekanwebregularfanum.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: Farsi;
+      font-style: normal;
+      font-weight: 500;
+      src: url("../../public/fonts/iranyekanwebmediumfanum.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: Farsi;
+      font-style: normal;
+      font-weight: 800;
+      src: url("../../public/fonts/iranyekanwebextraboldfanum.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: Farsi;
+      font-style: normal;
+      font-weight: 850;
+      src: url("../../public/fonts/iranyekanwebblackfanum.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: Farsi;
+      font-style: normal;
+      font-weight: 900;
+      src: url("../../public/fonts/iranyekanwebextrablackfanum.woff") format("woff");
+    }
 }
 
-@media (prefers-color-scheme: dark) {
+
+:root {
+  --background-rgb: #F9FAFB;
+  --primary-color: #3290FF;
+  --primary-color-light: #e3f1fd;
+  --secondery-color: #003365;
+  --secondery-color-light: #0a4177;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* font-family: Farsi; */
+  direction: rtl;
+  color: var(--secondery-color);
+  background: var(--background-rgb);
 }
 
 @layer utilities {
@@ -31,3 +92,36 @@ body {
     text-wrap: balance;
   }
 }
+
+.bg_hero {
+  background-image : url('../../public/images/bg-pattern.webp');
+}
+
+.custom-box-shadow {
+  box-shadow: rgba(13, 34, 70, 0.02) 0px 2px 6px 0px, rgba(13, 34, 70, 0.02) 0px 8px 20px 0px;
+}
+
+
+
+.scroll_animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 7px;
+  background: var(--secondery-color-light);
+  transform-origin: 0%;
+  z-index: 10;
+}
+
+/* React-Tabs Custom Styles */
+.react-tabs__tab--selected {
+  border: none !important;
+  background-color: var(--primary-color) !important;
+  cursor: pointer;
+}
+.react-tabs__tab--selected:focus-visible {
+  border: none !important;
+  outline: none;
+}
+
